@@ -36,3 +36,5 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: ./ApprovalReusable.yml
+        with:
+          target: approval-env-1
