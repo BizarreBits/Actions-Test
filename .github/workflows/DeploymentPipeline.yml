@@ -35,6 +35,6 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: ./ApprovalReusable.yml
+      - uses: ./.github/workflows/ApprovalReusable.yml
         with:
           target: approval-env-1
