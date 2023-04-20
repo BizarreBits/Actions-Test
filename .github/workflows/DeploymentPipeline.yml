@@ -6,7 +6,16 @@ name: Deployment
 on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_call:
-
+    inputs:
+      timeslot:
+        required: false
+        type: string
+      artifact:
+        required: false
+        type: string
+      tenant:
+        required: true
+        type: string
 jobs:
   callPrep:
     runs-on: ubuntu-latest
@@ -18,12 +27,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo prep Script
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
           
   approval1:
     needs: callPrep
