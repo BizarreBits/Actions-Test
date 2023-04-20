@@ -13,4 +13,4 @@ jobs:
     environment: ${{ inputs.target }}
     steps:
     - name: print approval environment
-      run: echo $target
+      run: echo ${{ inputs.target }}
