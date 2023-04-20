@@ -1,5 +1,4 @@
 name: DeploymentChoice
-description: 'request approval'
 
 on:
   workflow_dispatch:
@@ -23,8 +22,8 @@ jobs:
   call-pipeline:
     runs-on: ubuntu-latest
     steps:
-      uses: /DeploymentPipeline.yml
-      with:
-        tenant: ${{ inputs.tenant }}
-        timeslot: ${{ inputs.timeslot }}
-        artifact: ${{ inputs.artifact }}
+      - uses: ./DeploymentPipeline.yml
+        with:
+          tenant: ${{ inputs.tenant }}
+          timeslot: ${{ inputs.timeslot }}
+          artifact: ${{ inputs.artifact }}
