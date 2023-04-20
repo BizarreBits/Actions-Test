@@ -20,13 +20,8 @@ on:
         - br
 jobs:
   call-pipeline:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: test ls
-        run: ls -l
-      - uses: ./DeploymentPipeline.yml
-        with:
-          tenant: ${{ inputs.tenant }}
-          timeslot: ${{ inputs.timeslot }}
-          artifact: ${{ inputs.artifact }}
+      uses: ./.github/workflows/DeploymentPipeline.yml
+      with:
+        tenant: ${{ inputs.tenant }}
+        timeslot: ${{ inputs.timeslot }}
+        artifact: ${{ inputs.artifact }}
