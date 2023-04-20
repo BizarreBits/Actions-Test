@@ -12,5 +12,5 @@ jobs:
     runs-on: ubuntu-latest
     environment: ${{ inputs.target }}
     steps:
-    - name: dummy
-      run: echo dummy step
+    - name: print approval environment
+      run: echo ${{ inputs.target }}
