@@ -23,6 +23,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: test ls
+        run: ls -l
       - uses: ./DeploymentPipeline.yml
         with:
           tenant: ${{ inputs.tenant }}
