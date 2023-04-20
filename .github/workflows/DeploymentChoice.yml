@@ -19,12 +19,11 @@ on:
         - all
         - it
         - br
-		
 jobs:
   call-pipeline:
     runs-on: ubuntu-latest
     steps:
-      uses: /ApprovalReusable.yml
+      uses: /DeploymentPipeline.yml
       with:
         tenant: ${{ inputs.tenant }}
         timeslot: ${{ inputs.timeslot }}
