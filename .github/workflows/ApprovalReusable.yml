@@ -11,3 +11,6 @@ jobs:
   approval-request:
     runs-on: ubuntu-latest
     environment: ${{ inputs.target }}
+    steps:
+    - name: dummy
+      run: echo dummy step
