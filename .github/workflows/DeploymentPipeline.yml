@@ -29,3 +29,13 @@ jobs:
     uses: ./.github/workflows/ApprovalReusable.yml
     with:
       target: approval-env-1
+  approval2:
+    needs: callPrep
+    uses: ./.github/workflows/ApprovalReusable.yml
+    with:
+      target: approval-env-2
+  approval3:
+    needs: callPrep
+    uses: ./.github/workflows/ApprovalReusable.yml
+    with:
+      target: approval-env-3
