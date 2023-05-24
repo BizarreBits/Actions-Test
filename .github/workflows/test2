@@ -1,0 +1,4 @@
+name: DeploymentChoice
+
+on:
+  workflow_dispatch:
