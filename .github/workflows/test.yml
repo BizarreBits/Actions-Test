@@ -7,6 +7,6 @@ jobs:
     strategy:
       matrix:
         target: [dev, stage, prod]
-    uses: ./Actions-Test/.github/workflows/ApprovalReusable.yml
+    uses: ./.github/workflows/ApprovalReusable.yml
     with:
       target: ${{ matrix.target }}
