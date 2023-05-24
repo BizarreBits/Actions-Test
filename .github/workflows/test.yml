@@ -1,6 +1,7 @@
-name: Matrix Strategy Max-Parallel Sample
+name: Matrix Test
 # The trigger event for the workflow file to run 
-on: push
+on: 
+  workflow_dispatch:
 
 jobs:
   ReuseableMatrixJobForDeployment:
