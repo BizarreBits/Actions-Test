@@ -1,4 +1,4 @@
-name: DeploymentChoice
+name: testtest
 
 on:
   workflow_dispatch:
